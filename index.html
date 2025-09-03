@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fascbook</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/workspace/css/style.css">
+</head>
+<body>
+    <main>
+        <header class="topbar">
+            <div class="topbar__left">
+                <div class="logo" aria-label="Fascbook" role="img">f</div>
+                <label class="search">
+                    <input type="search" placeholder="Search Fascbook" aria-label="Search" />
+                </label>
+            </div>
+            <nav class="topbar__center" aria-label="Primary">
+                <button class="nav-btn active" data-view="home" aria-pressed="true" title="Home">
+                    <span>Home</span>
+                </button>
+                <button class="nav-btn" data-view="watch" title="Watch">
+                    <span>Watch</span>
+                </button>
+                <button class="nav-btn" data-view="market" title="Marketplace">
+                    <span>Market</span>
+                </button>
+                <button class="nav-btn" data-view="groups" title="Groups">
+                    <span>Groups</span>
+                </button>
+            </nav>
+            <div class="topbar__right">
+                <button class="icon-btn" id="btn-create" title="Create">+</button>
+                <button class="icon-btn" id="btn-messages" title="Messenger">✉</button>
+                <button class="icon-btn" id="btn-notifs" title="Notifications">🔔</button>
+                <button class="profile">
+                    <img src="https://i.pravatar.cc/40?img=1" alt="Profile" />
+                    <span class="profile__name">You</span>
+                </button>
+            </div>
+        </header>
+
+        <div class="container">
+            <aside class="sidebar left-sidebar" aria-label="Left sidebar">
+                <ul class="menu">
+                    <li><a href="#"><img src="https://i.pravatar.cc/28?img=1" alt=""/> Your profile</a></li>
+                    <li><a href="#">Friends</a></li>
+                    <li><a href="#">Memories</a></li>
+                    <li><a href="#">Saved</a></li>
+                    <li><a href="#">Groups</a></li>
+                    <li><a href="#">Video</a></li>
+                    <li><a href="#">Marketplace</a></li>
+                    <li><a href="#">Feeds</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">See more</a></li>
+                </ul>
+                <div class="shortcuts">
+                    <h3>Your shortcuts</h3>
+                    <ul>
+                        <li><a href="#">Web Dev Circle</a></li>
+                        <li><a href="#">Design Hub</a></li>
+                        <li><a href="#">Gaming Crew</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <section class="main-section" aria-label="Main feed">
+                <div class="stories">
+                    <button class="story create">
+                        <img src="https://picsum.photos/seed/create/300/500" alt="" />
+                        <span>Create story</span>
+                    </button>
+                    <button class="story">
+                        <img src="https://picsum.photos/seed/s1/300/500" alt="" />
+                        <img class="avatar" src="https://i.pravatar.cc/40?img=2" alt="User" />
+                        <span>Alex</span>
+                    </button>
+                    <button class="story">
+                        <img src="https://picsum.photos/seed/s2/300/500" alt="" />
+                        <img class="avatar" src="https://i.pravatar.cc/40?img=3" alt="User" />
+                        <span>Sam</span>
+                    </button>
+                    <button class="story">
+                        <img src="https://picsum.photos/seed/s3/300/500" alt="" />
+                        <img class="avatar" src="https://i.pravatar.cc/40?img=4" alt="User" />
+                        <span>Jordan</span>
+                    </button>
+                </div>
+
+                <div class="composer card">
+                    <div class="composer__top">
+                        <img class="avatar" src="https://i.pravatar.cc/40?img=1" alt="You" />
+                        <input id="post-input" type="text" placeholder="What's on your mind, You?" />
+                        <button id="post-btn" class="btn">Post</button>
+                    </div>
+                    <div class="composer__actions">
+                        <button>Live Video</button>
+                        <button>Photo/Video</button>
+                        <button>Feeling/Activity</button>
+                    </div>
+                </div>
+
+                <ul id="feed" class="feed-list">
+                    <li class="post card" data-post-id="1">
+                        <div class="post__head">
+                            <img class="avatar" src="https://i.pravatar.cc/40?img=5" alt="Pat" />
+                            <div>
+                                <div class="post__author">Pat Doe</div>
+                                <div class="post__meta">2h · Public</div>
+                            </div>
+                            <button class="icon-btn more">⋯</button>
+                        </div>
+                        <div class="post__text">Just finished a 5k run! 🏃‍♂️ Feeling great.</div>
+                        <img class="post__media" src="https://picsum.photos/seed/run/800/450" alt="Run" />
+                        <div class="post__actions">
+                            <button class="like-btn" aria-pressed="false">👍 Like</button>
+                            <button class="comment-btn">💬 Comment</button>
+                            <button class="share-btn">↗ Share</button>
+                        </div>
+                        <div class="post__comments">
+                            <ul class="comments"></ul>
+                            <div class="comment-composer">
+                                <input type="text" placeholder="Write a comment..." />
+                                <button class="btn add-comment">Send</button>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="post card" data-post-id="2">
+                        <div class="post__head">
+                            <img class="avatar" src="https://i.pravatar.cc/40?img=6" alt="Lee" />
+                            <div>
+                                <div class="post__author">Lee Chen</div>
+                                <div class="post__meta">5h · Friends</div>
+                            </div>
+                            <button class="icon-btn more">⋯</button>
+                        </div>
+                        <div class="post__text">New design exploration for a dashboard. Thoughts?</div>
+                        <img class="post__media" src="https://picsum.photos/seed/design/800/450" alt="Design" />
+                        <div class="post__actions">
+                            <button class="like-btn" aria-pressed="false">👍 Like</button>
+                            <button class="comment-btn">💬 Comment</button>
+                            <button class="share-btn">↗ Share</button>
+                        </div>
+                        <div class="post__comments">
+                            <ul class="comments"></ul>
+                            <div class="comment-composer">
+                                <input type="text" placeholder="Write a comment..." />
+                                <button class="btn add-comment">Send</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <aside class="sidebar right-sidebar" aria-label="Right sidebar">
+                <div class="sponsored card">
+                    <h3>Sponsored</h3>
+                    <a class="sponsored__item" href="#">
+                        <img src="https://picsum.photos/seed/ad1/320/180" alt="Ad" />
+                        <div>
+                            <div class="ad__title">Build faster UIs</div>
+                            <div class="ad__meta">Try Inter UI Kit</div>
+                        </div>
+                    </a>
+                    <a class="sponsored__item" href="#">
+                        <img src="https://picsum.photos/seed/ad2/320/180" alt="Ad" />
+                        <div>
+                            <div class="ad__title">Learn TypeScript</div>
+                            <div class="ad__meta">Free course</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="contacts card">
+                    <div class="contacts__header">
+                        <h3>Contacts</h3>
+                        <div class="contacts__actions">
+                            <button class="icon-btn">🔍</button>
+                            <button class="icon-btn">⋯</button>
+                        </div>
+                    </div>
+                    <ul class="contacts__list">
+                        <li><img src="https://i.pravatar.cc/24?img=7" alt=""/> Taylor</li>
+                        <li><img src="https://i.pravatar.cc/24?img=8" alt=""/> Morgan</li>
+                        <li><img src="https://i.pravatar.cc/24?img=9" alt=""/> Casey</li>
+                        <li><img src="https://i.pravatar.cc/24?img=10" alt=""/> Jamie</li>
+                        <li><img src="https://i.pravatar.cc/24?img=11" alt=""/> Riley</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <script src="/workspace/js/script.js"></script>
+</body>
+</html>
